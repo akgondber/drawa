@@ -8,7 +8,7 @@ const prompt = new Survey({
     { name: '2', message: 'Disagree' },
     { name: '3', message: 'Neutral' },
     { name: '4', message: 'Agree' },
-    { name: '5', message: 'Strongly Agree' }
+    { name: '5', message: 'Strongly Agr' }
   ],
   margin: [0, 0, 2, 1],
   choices: [
@@ -38,5 +38,5 @@ const prompt = new Survey({
 prompt.run()
   .then(value => console.log('ANSWERS:', value))
   .catch(console.error);
-  
+
 console.log("Hello, World!");
