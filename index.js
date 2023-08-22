@@ -8,7 +8,7 @@ const prompt = new Survey({
     { name: '2', message: 'Disagree' },
     { name: '3', message: 'Neutral' },
     { name: '4', message: 'Agree' },
-    { name: '5', message: 'Strongly Agreee' }
+    { name: '5', message: 'Strongly Agreeeee' }
   ],
   margin: [0, 0, 2, 1],
   choices: [
