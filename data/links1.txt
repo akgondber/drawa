@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/74046364/zustand-get-state-from-another-zustand-store
+https://docs.volta.sh/guide/understanding
+https://reflectoring.io/nodejs-modules-imports/
+https://flaviocopes.com/how-to-get-last-item-path-javascript/
+https://tkdodo.eu/blog/working-with-zustand
+https://www.devsamples.com/css/flexbox-prevent-element-stretching
