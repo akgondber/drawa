@@ -1,0 +1,54 @@
+import {execa} from 'execa';
+import Prompt from 'enquirer';
+import { input } from '@inquirer/prompts';
+import * as R from 'ramda';
+
+const {stdout} = await execa('git', ['status', '--porcelain']);
+const items = stdout.split('\n').map(el => el.split(/\s+/));
+console.log(items);
+console.log('+++++++++++++++++++');
+console.log(R.last(R.last(items)));
+
+const answer = await input({ message: 'Enter your name' });
+if (answer === 'w') {
+    // process.exitCode = 0;
+    process.exit();
+    console.log('scvf ', answer);
+} else {
+    console.log(answer);
+}
+
+console.log('-=======-');
+const toAdd = [];
+const shortFlagsMapping = {
+    'A': 'added',
+    'M': 'modified',
+    'D': 'deleted',
+};
+// const getChangeTags = (changesFlags) => {
+//     if (changesFlags.length === 2) {
+//         return [R.prop(R.nth(1, changesFlags)!, shortFlagsMapping)!];
+//     } else {
+//         return ['staged', R.prop(R.nth(1, changesFlags)!, shortFlagsMapping)!];
+//     }
+// }
+console.log(items);
+
+const getChangeTags = (changesFlags) => {
+							if (changesFlags.length === 2) {
+								return [R.prop(R.nth(1, changesFlags), shortFlagsMapping)];
+							} else {
+								if (changesFlags[0] === '??') {
+									return ['untracked'];
+								}
+								return ['staged', R.prop(R.nth(0, changesFlags), shortFlagsMapping)];
+							}
+						};
+items.map(parts => {
+    const ty = R.take(parts.length - 1, parts);
+    const ns = getChangeTags(ty);
+    console.log(parts.join(' '));
+    console.log('***************');
+    console.log(ns);
+    console.log('=======================');
+});

@@ -12,7 +12,7 @@ userDataPrompt.run()
         { name: '2', message: 'Disagree' },
         { name: '3', message: 'Neutral' },
         { name: '4', message: 'Agree' },
-        { name: '5', message: 'Strongly Agrde' }
+        { name: '5', message: 'Strongly Agree' }
       ],
       margin: [0, 0, 2, 1],
       choices: [

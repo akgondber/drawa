@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "play": "node index.js"
+    "play": "node index.js",
+    "ind": "node inda.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "enquirer": "^2.4.1"
-  }
+    "@inquirer/prompts": "^3.0.4",
+    "enquirer": "^2.4.1",
+    "execa": "^8.0.1",
+    "ramda": "^0.29.0"
+  },
+  "type": "module"
 }
- 
