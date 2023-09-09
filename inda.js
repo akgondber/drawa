@@ -1,7 +1,54 @@
 import {execa} from 'execa';
 import Prompt from 'enquirer';
 import { input } from '@inquirer/prompts';
+import select, { Separator } from '@inquirer/select';
 import * as R from 'ramda';
+
+//console.log(R.pipe(R.applySpec({a: R.sum}), R.prop('a'))(4, 6));
+const getCmd = (f) => [f];
+const exe = async (cmd) => {
+    const res = await execa('git', cmd);
+    if (/no changes added to commit/.exec(res.stdout)) {
+        console.log('Nothing');
+
+        const answer = await select({
+            message: 'Select a package manager',
+            choices: [
+              {
+                name: 'npm',
+                value: 'npm',
+                description: 'npm is the most popular package manager',
+              },
+              {
+                name: 'yarn',
+                value: 'yarn',
+                description: 'yarn is an awesome package manager',
+              },
+              new Separator(),
+              {
+                name: 'jspm',
+                value: 'jspm',
+                disabled: true,
+              },
+              {
+                name: 'pnpm',
+                value: 'pnpm',
+                disabled: '(pnpm is not available)',
+              },
+            ],
+          });
+        console.log(answer);
+    }
+
+    return `
+        ${res.escapedCommand}
+        --------------------
+        ${res.stdout}
+    `;
+};
+
+const fr = R.pipe(getCmd, exe, R.andThen(console.log))('status');
+console.log('GGGGGGGGGG', fr);
 
 const {stdout} = await execa('git', ['status', '--porcelain']);
 const items = stdout.split('\n').map(el => el.split(/\s+/));
