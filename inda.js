@@ -8,11 +8,11 @@ import * as R from 'ramda';
 const getCmd = (f) => [f];
 const exe = async (cmd) => {
     const res = await execa('git', cmd);
-    if (/no changes added to commi/.exec(res.stdout)) {
+    if (/no changes added to com/.exec(res.stdout)) {
         console.log('Nothing');
 
         const answer = await select({
-            message: 'Select a package manager',
+            message: 'Select a package manager please',
             choices: [
               {
                 name: 'npm',
