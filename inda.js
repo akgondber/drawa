@@ -12,7 +12,7 @@ const exe = async (cmd) => {
         console.log('Nothing');
 
         const answer = await select({
-            message: 'Select a package manager please',
+            message: 'Select a package manager',
             choices: [
               {
                 name: 'npm',
