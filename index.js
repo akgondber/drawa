@@ -34,7 +34,7 @@ userDataPrompt.run()
         },
         {
           name: 'colors',
-          message: 'The website has a pleasing color palette.'
+          message: 'The website has a pleasing color pal.'
         }
       ]
     });
