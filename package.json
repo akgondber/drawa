@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "play": "node index.js",
     "ind": "node inda.js",
-    "check": "npm-check"
+    "check": "npm-check",
+    "npch": "npm-check"
   },
   "keywords": [],
   "author": "",
