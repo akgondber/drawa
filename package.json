@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "play": "node index.js",
-    "ind": "node inda.js"
+    "ind": "node inda.js",
+    "check": "npm-check"
   },
   "keywords": [],
   "author": "",
