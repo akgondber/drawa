@@ -17,7 +17,7 @@ const exe = async (cmd) => {
               {
                 name: 'npm',
                 value: 'npm',
-                description: 'npm is the most popular package manager',
+                description: 'npm is the most popular package man',
               },
               {
                 name: 'yarn',
