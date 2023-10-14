@@ -8,16 +8,28 @@
     "play": "node index.js",
     "ind": "node inda.js",
     "check": "npm-check",
-    "npch": "npm-check"
+    "npch": "npm-check",
+    "neverthrowplg": "tsc src/neverthrow.ts && node src/neverthrow.js",
+    "lintmd": "node src/lint.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@inquirer/prompts": "^3.0.4",
+    "consola": "^3.2.3",
     "enquirer": "^2.4.1",
     "execa": "^8.0.1",
-    "ramda": "^0.29.0"
+    "neverthrow": "^6.0.0",
+    "ramda": "^0.29.0",
+    "retext-english": "^5.0.0",
+    "retext-equality": "^7.0.0",
+    "retext-passive": "^5.0.0",
+    "retext-stringify": "^4.0.0",
+    "to-vfile": "^8.0.0",
+    "typescript": "^5.2.2",
+    "unified": "^11.0.3",
+    "vfile-reporter": "^8.1.0"
   },
   "type": "module"
 }
