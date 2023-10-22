@@ -46,3 +46,4 @@ li 5.18.7
 Imitating a feature 1
 Imitating a feature 2
 Fixed bug 2
+Fixed bug 3
