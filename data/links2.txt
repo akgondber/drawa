@@ -48,3 +48,5 @@ Imitating a feature 2
 Fixed bug 2
 Fixed bug 3
 Added feature 3
+Added feature 4
+Added feature 5
